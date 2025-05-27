@@ -1,0 +1,180 @@
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Navigation />
+<section class="bg-blue-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Custom Notebooks Collection</h1>
+        <p class="text-xl max-w-2xl mx-auto">Premium personalized notebooks for your brand, events, and corporate gifts</p>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Notebook Product 1 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
+                        <path d="M14 17H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Executive Hardcover</h3>
+                    <p class="text-gray-600 mb-4">Premium hardcover notebooks with debossed logo and high-quality paper.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Hardcover</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Debossing</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Ribbon Marker</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+
+            <!-- Notebook Product 2 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+                        ></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Soft Touch Journal</h3>
+                    <p class="text-gray-600 mb-4">Elegant soft-touch cover with customizable pages and elastic closure.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Soft Touch</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Elastic Band</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Back Pocket</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+
+            <!-- Notebook Product 3 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly Notebook</h3>
+                    <p class="text-gray-600 mb-4">Sustainable notebooks made from recycled materials with seed paper covers.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Recycled Paper</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Plantable Cover</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Eco-Friendly</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+
+            <!-- Notebook Product 4 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Leather-Bound Journal</h3>
+                    <p class="text-gray-600 mb-4">Luxurious genuine or vegan leather notebooks with custom embossing options.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Leather Cover</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Embossing</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Premium Paper</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+
+            <!-- Notebook Product 5 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"
+                        ></path>
+                        <path d="M15 11H9V9h6v2zm0 4H9v-2h6v2z"></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Conference Notebook</h3>
+                    <p class="text-gray-600 mb-4">Practical notebooks designed for events, conferences, and seminars.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Pen Loop</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Custom Pages</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Bulk Orders</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+
+            <!-- Notebook Product 6 -->
+            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                <div class="h-64 bg-gray-200 flex items-center justify-center">
+                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"
+                        ></path>
+                    </svg>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Custom Page Planner</h3>
+                    <p class="text-gray-600 mb-4">Fully customizable planners with branded pages, calendars, and sections.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Custom Layout</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Calendar Pages</span>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Tabbed Sections</span>
+                    </div>
+                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
+                        >Request Quote</button
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-6">Custom Notebook Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <div class="text-blue-600 text-3xl mb-3">🎨</div>
+                <h3 class="font-semibold mb-2">Cover Options</h3>
+                <p class="text-gray-600 text-sm">Hardcover, softcover, leather, fabric, or eco-friendly materials</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <div class="text-blue-600 text-3xl mb-3">📝</div>
+                <h3 class="font-semibold mb-2">Page Types</h3>
+                <p class="text-gray-600 text-sm">Lined, dotted, graph, blank, or custom printed pages</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <div class="text-blue-600 text-3xl mb-3">✨</div>
+                <h3 class="font-semibold mb-2">Finishing Touches</h3>
+                <p class="text-gray-600 text-sm">Ribbon markers, elastic bands, pen loops, and pockets</p>
+            </div>
+            <div class="bg-white p-5 rounded-lg shadow-sm">
+                <div class="text-blue-600 text-3xl mb-3">🔠</div>
+                <h3 class="font-semibold mb-2">Branding Methods</h3>
+                <p class="text-gray-600 text-sm">Embossing, debossing, foil stamping, and full-color printing</p>
+            </div>
+        </div>
+    </div>
+</section>
