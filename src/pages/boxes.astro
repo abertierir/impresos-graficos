@@ -1,164 +1,165 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { Image } from 'astro:assets';
+import imagePremiumBox from '../assets/premiun-gift-box.png';
+import imageDeliveryBox from '../assets/delivery-box.png';
+import productPackagingImage from '../assets/packaging.png';
+import rigidBoxImage from '../assets/rigid-box.png';
+import giftBoxImage from '../assets/gift-box.png';
+import ecoFriendlyBoxImage from '../assets/eco-friendly-box.png';
 ---
 
-<Navigation />
-<section class="bg-blue-600 text-white py-16">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">Custom Packaging Solutions</h1>
-        <p class="text-xl max-w-2xl mx-auto">Elevate your product presentation with our premium custom boxes</p>
-    </div>
-</section>
+<html lang="es">
+    <Header />
+    <body>
+        <Navigation />
+        <section class="bg-blue-600 text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Solución - Empaques Personalizados</h1>
+                <p class="text-xl max-w-2xl mx-auto">Eleva la presentación de tu producto con empaques a la medida.</p>
+            </div>
+        </section>
 
-<section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Box Product 1 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M21 16.5c0 .83-.67 1.5-1.5 1.5h-9c-.83 0-1.5-.67-1.5-1.5V9.5c0-.83.67-1.5 1.5-1.5h9c.83 0 1.5.67 1.5 1.5v7zm0-13.5h-18c-1.66 0-3 1.34-3 3v12c0 1.66 1.34 3 3 3h18c1.66 0 3-1.34 3-3v-12c0-1.66-1.34-3-3-3zm-18 1.5h18c.83 0 1.5.67 1.5 1.5v12c0 .83-.67 1.5-1.5 1.5h-18c-.83 0-1.5-.67-1.5-1.5v-12c0-.83.67-1.5 1.5-1.5z"
-                        ></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Premium Gift Box</h3>
-                    <p class="text-gray-600 mb-4">Elegant gift boxes with magnetic closure, perfect for high-end products and corporate gifts.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Magnetic Closure</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Custom Sizes</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Foil Stamping</span>
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Box Product 1 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <Image src={imagePremiumBox} alt="Caja de lujo" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Premium Gift Box</h3>
+                            <p class="text-gray-600 mb-4">
+                                Cajas elegantes con cierre magnético, perfectas para productos de alta gama y regalos corporativos..
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Cierre Magnético</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Tamaños Personalizados</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Estampado en Foil</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar
+                            </button>
+                        </div>
                     </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
-                    >
+
+                    <!-- Box Product 2 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <Image src={imageDeliveryBox} alt="Cajas para Envíos" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Cajas para envíos</h3>
+                            <p class="text-gray-600 mb-4">Cajas resistentes y personalizables, ideales para e-commerce y servicios de suscripción.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Ecológicas</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Impresión a Todo Color</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Autoensamblables</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Box Product 3 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <Image src={productPackagingImage} alt="Empaques para producto" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Empaque de Producto</h3>
+                            <p class="text-gray-600 mb-4">Empaques minoristas personalizados diseñados para destacar en estantería y reforzar la marca.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Opción con Ventana</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Varios Diseños</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Insertos Personalizados</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar</button
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Box Product 4 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <div class="h-64 bg-gray-200 flex items-center justify-center">
+                                <Image src={rigidBoxImage} alt="caja rígida" class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Caja Rígida</h3>
+                            <p class="text-gray-600 mb-4">Cajas de lujo con acabados premium para productos exclusivos y ocasiones especiales.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Con Relieve</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Diseños Exclusivos</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Cierre con Cinta</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar</button
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Box Product 5 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <Image src={giftBoxImage} alt="Caja de regalo corporativa" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Caja de Regalo Corporativa</h3>
+                            <p class="text-gray-600 mb-4">
+                                Cajas personalizadas para eventos corporativos, agradecimientos a empleados y regalos para clientes.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Desayunos</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Obsequios Navideños</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Acabados Metálicos</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar</button
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Box Product 6 -->
+                    <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+                        <div class="h-64 bg-gray-200 flex items-center justify-center">
+                            <Image src={ecoFriendlyBoxImage} alt="Empaques Ecológicos" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Empaques Ecológicos</h3>
+                            <p class="text-gray-600 mb-4">Línea de empaques sostenibles hechas con materiales reciclados y biodegradables.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Reciclables</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Biodegradables</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Tintas a base de Soya</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')">
+                                Cotizar</button
+                            >
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Box Product 2 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"></path>
-                        <path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Mailer Box</h3>
-                    <p class="text-gray-600 mb-4">Sturdy and customizable mailer boxes perfect for e-commerce and subscription services.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Eco-friendly</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Full Color Print</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Self-locking</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-2xl font-bold mb-6">¿Buscas algo distinto?</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Nos especializamos en crear soluciones únicas de empaque adaptadas a tus necesidades específicas. Contáctanos para hablar de tu proyecto.
+                    <button
+                        class="bg-blue-600 text-white font-medium py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-md"
+                        onclick="showPage('contact')">Contacta a Nuestro Equipo de Diseño</button
                     >
-                </div>
+                </p>
             </div>
-
-            <!-- Box Product 3 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"
-                        ></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Product Packaging</h3>
-                    <p class="text-gray-600 mb-4">Custom retail packaging designed to enhance shelf presence and brand recognition.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Window Option</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Spot UV</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Custom Inserts</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
-                    >
-                </div>
-            </div>
-
-            <!-- Box Product 4 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>
-                        <path d="M14 9h-4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1z"></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Rigid Box</h3>
-                    <p class="text-gray-600 mb-4">Luxury rigid boxes with premium finishes for high-end products and special occasions.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Fabric Wrapped</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Embossing</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Ribbon Closure</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
-                    >
-                </div>
-            </div>
-
-            <!-- Box Product 5 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path
-                            d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.83 1H5.42l.82-1zM5 19V8h14v11H5z"
-                        ></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Corporate Gift Box</h3>
-                    <p class="text-gray-600 mb-4">Custom gift boxes designed for corporate events, employee appreciation, and client gifts.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Custom Inserts</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Logo Debossing</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Metallic Finishes</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
-                    >
-                </div>
-            </div>
-
-            <!-- Box Product 6 -->
-            <div class="product-card bg-gray-50 rounded-lg overflow-hidden shadow-sm">
-                <div class="h-64 bg-gray-200 flex items-center justify-center">
-                    <svg class="w-32 h-32 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"></path>
-                        <path d="M7 7h10v10H7z"></path>
-                    </svg>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">Eco-Friendly Packaging</h3>
-                    <p class="text-gray-600 mb-4">Sustainable packaging solutions made from recycled and biodegradable materials.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Recyclable</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Biodegradable</span>
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Soy-based Inks</span>
-                    </div>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors" onclick="showPage('contact')"
-                        >Request Quote</button
-                    >
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-2xl font-bold mb-6">Need a Custom Solution?</h2>
-        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
-            We specialize in creating unique packaging solutions tailored to your specific needs. Contact us to discuss your project.
-        </p>
-        <button class="bg-blue-600 text-white font-medium py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-md" onclick="showPage('contact')"
-            >Contact Our Design Team</button
-        >
-    </div>
-</section>
+        </section>
+    </body><Footer />
+</html>

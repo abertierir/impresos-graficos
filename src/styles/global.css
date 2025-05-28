@@ -9,6 +9,11 @@ body {
 .gradient-bg {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 }
+.index-bg {
+    background-image: url('../assets/homepage.jpg');
+    background-size: cover;
+    background-position: center;
+}
 .testimonial-card {
     transition: all 0.3s ease;
 }
